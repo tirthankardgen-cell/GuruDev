@@ -68,3 +68,9 @@ When implementing the backend, follow PROJECT.md sections 9–11: Firebase token
 React 19.3.1, Next.js 16.4.6, Node 26.13.1 LTS, and Firebase 13.4.0 were checked against the live registries/release index at scaffolding time. Vercel lists Node 26.x as supported. TypeScript 6.0.3 and ESLint 9.39.5 are pinned for compatibility with the Next.js lint tooling; TypeScript 7 is not yet supported by its parser. Fonts are bundled locally, so deployment does not depend on Google Fonts being reachable during a build.
 
 Original project/research files and browser research artifacts are preserved. Generated dependencies, build output, local environments, and QA screenshots are ignored.
+
+## Verification
+
+The preview passed a clean `npm ci`, production `npm run build`, `npm run lint`, and `npm run typecheck` on Node 26.13.1. All 18 page routes were checked at 320px, 768px, and 1440px (54 layout checks): successful responses, one main heading, and no horizontal page overflow.
+
+Browser checks covered the JavaScript/Python samples, explicit custom-code/input preview notices, reset, problem filters and empty results, reference search/expansion, lesson reflection, project steps, mobile navigation, keyboard focus and the skip link, and unknown-route handling. The four primary text colours exceed 4.5:1 contrast on paper (lowest: terracotta at 5.33:1). Desktop and mobile screenshots are available locally in the ignored `output/playwright/` folder.

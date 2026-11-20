@@ -1623,6 +1623,7 @@ p {
   gap: 50px;
 }
 .lesson-sidebar {
+  min-width: 0;
   border-right: 1px solid var(--border);
   padding-right: 24px;
 }
